@@ -1,5 +1,5 @@
 /// <reference types="jest"/>
-import { defineConfig } from "jest";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
