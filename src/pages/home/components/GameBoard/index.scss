@@ -1,0 +1,22 @@
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+  width: 100%;
+
+  &__board {
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  &__board-space {
+    border: white 0.5px solid;
+    background-color: black;
+    cursor: pointer;
+  }
+}
