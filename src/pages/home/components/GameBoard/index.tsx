@@ -6,13 +6,13 @@ const GameBoard: React.FC = () => {
   const gameSpaces: GameSpace[] = createSpaces(numOfSpaces)
 
   return (
-    <section className="game">
+    <main className="game">
       <div className="game__board">
         {gameSpaces.map((space) => {
           return space.element
         })}
       </div>
-    </section>
+    </main>
   )
 }
 
