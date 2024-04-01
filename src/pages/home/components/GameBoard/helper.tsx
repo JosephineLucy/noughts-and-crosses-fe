@@ -7,7 +7,7 @@ export type GameSpace = {
 }
 
 export function createSpaces(numOfSpaces: number) {
-  const gameSpaces = []
+  const gameSpaces: GameSpace[] = []
 
   for (let i = 0; i < numOfSpaces; i++) {
     const gameSpace: GameSpace = {
