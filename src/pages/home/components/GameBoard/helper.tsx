@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-type GameSpace = {
+export type GameSpace = {
   id: number
   element: ReactElement
   icon: string
@@ -12,7 +12,7 @@ export function createSpaces(numOfSpaces: number) {
   for (let i = 0; i < numOfSpaces; i++) {
     const gameSpace: GameSpace = {
       id: i,
-      element: <button className="game__board-space"></button>,
+      element: <button className="game__board-space" key={i}></button>,
       icon: '',
     }
     gameSpaces.push(gameSpace)

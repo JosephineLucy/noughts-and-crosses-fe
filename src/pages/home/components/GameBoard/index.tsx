@@ -1,10 +1,16 @@
+import { numOfSpaces } from '../../../../constants/gameboard'
+import { GameSpace, createSpaces } from './helper'
 import './index.scss'
 
 const GameBoard: React.FC = () => {
+  const gameSpaces: GameSpace[] = createSpaces(numOfSpaces)
+
   return (
     <section className="game">
       <div className="game__board">
-        {<button className="game__board-space"></button>}
+        {gameSpaces.map((space) => {
+          return space.element
+        })}
       </div>
     </section>
   )
