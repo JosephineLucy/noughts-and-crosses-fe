@@ -1,7 +1,7 @@
 import Footer from '../Footer'
 import GameBoard from '../GameBoard'
 import Header from '../Header'
-import './index.css'
+import './styles.scss'
 
 const Home: React.FC = () => {
   return (
