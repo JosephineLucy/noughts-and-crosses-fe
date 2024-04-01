@@ -1,1 +1,1 @@
-export const numOfSpaces: number = 9
+export const NUM_OF_SPACES: number = 9
