@@ -1,6 +1,6 @@
 import './index.scss'
 
-const GameBoard = () => {
+const GameBoard: React.FC = () => {
   return (
     <section className="game">
       <div className="game__board">

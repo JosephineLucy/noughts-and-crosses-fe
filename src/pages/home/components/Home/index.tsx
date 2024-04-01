@@ -3,7 +3,7 @@ import GameBoard from '../GameBoard'
 import Header from '../Header'
 import './index.css'
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <section className="home">
       <Header />

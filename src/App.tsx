@@ -1,7 +1,7 @@
 import './App.scss'
 import Home from './pages/home/components/Home'
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <>
       <Home />
