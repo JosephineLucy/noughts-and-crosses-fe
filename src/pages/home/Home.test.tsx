@@ -8,7 +8,7 @@ describe('Home', () => {
     render(<Home />)
 
     const headerTitle = screen.getByRole('heading', {
-      name: 'Noughts and Crosses',
+      name: 'Naughty Pups and Cross Kitties',
     })
 
     expect(headerTitle).toBeInTheDocument()
