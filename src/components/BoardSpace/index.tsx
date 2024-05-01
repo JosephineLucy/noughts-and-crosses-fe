@@ -15,7 +15,9 @@ const BoardSpace: React.FC<BoardSpaceProps> = ({ id }) => {
       id={`board-space-${id}`}
       aria-label="board-space"
       onClick={() => setSpaceIcon('blue')}
-    ></button>
+    >
+      {spaceIcon && <img></img>}
+    </button>
   )
 }
 
