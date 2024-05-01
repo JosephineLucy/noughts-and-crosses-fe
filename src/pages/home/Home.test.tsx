@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 import Home from '.'
 
 describe('Home', () => {
-  test('renders Header as expected', () => {
+  test('renders Header', () => {
     render(<Home />)
 
     const headerTitle = screen.getByRole('heading', {
@@ -14,16 +14,18 @@ describe('Home', () => {
     expect(headerTitle).toBeInTheDocument()
   })
 
-  //todo
-  test('renders GameBoard as expected', () => {})
-
-  test('renders Footer as expected', () => {
+  test('renders GameBoard', () => {
     render(<Home />)
 
-    const footerTitle = screen.getByRole('heading', {
-      name: 'Noughts and Crosses ©',
-    })
+    const gameBoard = screen.getByRole('main', { name: 'game-board' })
 
+    expect(gameBoard).toBeInTheDocument()
+  })
+
+  test('renders Footer', () => {
+    render(<Home />)
+
+    const footerTitle = screen.getByLabelText('app footer')
     expect(footerTitle).toBeInTheDocument()
   })
 })

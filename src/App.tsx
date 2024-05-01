@@ -1,5 +1,5 @@
 import './App.scss'
-import Home from './pages/home/components/Home'
+import Home from './pages/home'
 
 const App: React.FC = () => {
   return (

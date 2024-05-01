@@ -2,9 +2,9 @@ import './styles.scss'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="app-footer">
+    <div className="app-footer" aria-label="app footer">
       <p className="app-footer__title">Noughts and Crosses ©</p>
-    </footer>
+    </div>
   )
 }
 

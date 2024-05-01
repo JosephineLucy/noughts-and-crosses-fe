@@ -1,7 +1,7 @@
-import Footer from '../Footer'
-import GameBoard from '../GameBoard'
-import Header from '../Header'
 import './styles.scss'
+import Footer from '../../components/Footer'
+import GameBoard from '../../components/GameBoard'
+import Header from '../../components/Header'
 
 const Home: React.FC = () => {
   return (
