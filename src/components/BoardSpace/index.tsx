@@ -13,10 +13,10 @@ const BoardSpace: React.FC<BoardSpaceProps> = ({ id }) => {
     <button
       className="game-board__space"
       id={`board-space-${id}`}
-      aria-label="board-space"
+      aria-label={`board-space-${id}`}
       onClick={() => setSpaceIcon('blue')}
     >
-      {spaceIcon && <img></img>}
+      {spaceIcon && <img src={spaceIcon} alt="nought or cross icon"></img>}
     </button>
   )
 }
