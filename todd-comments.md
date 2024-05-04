@@ -18,5 +18,6 @@
 16. if you want to get main in your tests, you don't need to use the name property. You could just getByRole("main") as there should only ever be 1 main element in your project. The same is true of the header and footer tags (though the role of the footer tag is something daft like 'content-info'.)
 17. In your footer test, you are not using getByRole. If you change your footer so it uses the footer tag instead of div (as suggested above) you can use getByRole('content-info') to get it (you might have to check I have 'content-info' right)
 18. Suggestion - you could give some thought to passing your board size/number of spaces to the GameBoard component as a prop. It would make it more reusable and gives you the potential to create grids of any size.
+19. Something to think about - when I use my screen reader to move through your spaces, they are all called "board space" so I have no idea which space I am on.
 
 I think that is all from me at this point. It's looking nice and tidy in general even though I've made lots of comments.
