@@ -11,6 +11,7 @@ describe('Home', () => {
       name: 'Noughts and Crosses',
     })
 
+    screen.debug()
     expect(headerTitle).toBeInTheDocument()
   })
 

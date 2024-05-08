@@ -6,7 +6,7 @@ import Header from '../../components/Header'
 const Home: React.FC = () => {
   return (
     <section className="home">
-      <Header />
+      <Header title="Noughts and Crosses" />
       <GameBoard />
       <Footer />
     </section>
