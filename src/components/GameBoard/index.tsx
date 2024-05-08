@@ -1,4 +1,4 @@
-import { NUM_OF_SPACES } from '../../constants/gameboard'
+import { NUM_OF_SPACES } from '../../constants/constants'
 import { BoardSpace, createSpaces } from './helper'
 import './styles.scss'
 
