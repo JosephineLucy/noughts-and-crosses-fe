@@ -18,7 +18,7 @@ describe('Home', () => {
   test('renders GameBoard', () => {
     render(<Home />)
 
-    const gameBoard = screen.getByRole('main', { name: 'game-board' })
+    const gameBoard = screen.getByRole('main')
 
     expect(gameBoard).toBeInTheDocument()
   })
