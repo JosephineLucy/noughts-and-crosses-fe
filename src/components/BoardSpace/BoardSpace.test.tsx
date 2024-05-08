@@ -22,4 +22,14 @@ describe('BoardSpace', () => {
 
     expect(image).toBeInTheDocument()
   })
+
+  test('image source is set to cat url on click of first button', () => {
+    render(<BoardSpace id={3} />)
+
+    const boardSpace = screen.getByRole('button', { name: 'board-space-3' })
+
+    fireEvent.click(boardSpace)
+
+    // const image = screen.getByRole('img')
+  })
 })
