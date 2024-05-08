@@ -1,9 +1,9 @@
-import { NUM_OF_SPACES } from '../../constants/constants'
+import { NUM_OF_BOARD_SPACES } from '../../constants/constants'
 import { BoardSpace, createSpaces } from './helper'
 import './styles.scss'
 
 const GameBoard: React.FC = () => {
-  const boardSpaces: BoardSpace[] = createSpaces(NUM_OF_SPACES)
+  const boardSpaces: BoardSpace[] = createSpaces(NUM_OF_BOARD_SPACES)
 
   return (
     <main className="game-board">

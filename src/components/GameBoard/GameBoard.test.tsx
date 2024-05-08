@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import GameBoard from '.'
-import { NUM_OF_SPACES } from '../../constants/constants'
+import { NUM_OF_BOARD_SPACES } from '../../constants/constants'
 
 describe('GameBoard', () => {
   test('renders correct number of board spaces', () => {
@@ -11,6 +11,6 @@ describe('GameBoard', () => {
       name: 'board-space',
     })
 
-    expect(boardSpaces.length).toBe(NUM_OF_SPACES)
+    expect(boardSpaces.length).toBe(NUM_OF_BOARD_SPACES)
   })
 })
