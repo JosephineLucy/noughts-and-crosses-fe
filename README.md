@@ -1,3 +1,3 @@
-# Noughts and Crosses
+# Noughts and Crosses FE
 
-A phenomenal game.
+Frontend of an app for playing noughts and crosses xoxo

@@ -1,9 +1,13 @@
 import './styles.scss'
 
-const Header: React.FC = () => {
+type HeaderProps = {
+  title: string
+}
+
+const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
     <header className="app-header">
-      <h1 className="app-header__title">Naughty Pups and Cross Kitties</h1>
+      <h1 className="app-header__title">{title}</h1>
     </header>
   )
 }

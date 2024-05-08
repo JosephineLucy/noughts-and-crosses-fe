@@ -1,8 +1,8 @@
-import { NUM_OF_SPACES } from '../../constants/gameboard'
+import { NUM_OF_BOARD_SPACES } from '../../constants/constants'
 
 export function createSpaceIds() {
   const result = []
-  for (let i = 0; i < NUM_OF_SPACES; i++) {
+  for (let i = 0; i < NUM_OF_BOARD_SPACES; i++) {
     result.push(i + 1)
   }
   return result

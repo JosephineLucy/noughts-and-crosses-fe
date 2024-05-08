@@ -8,16 +8,17 @@ describe('Home', () => {
     render(<Home />)
 
     const headerTitle = screen.getByRole('heading', {
-      name: 'Naughty Pups and Cross Kitties',
+      name: 'Noughts and Crosses',
     })
 
+    screen.debug()
     expect(headerTitle).toBeInTheDocument()
   })
 
   test('renders GameBoard', () => {
     render(<Home />)
 
-    const gameBoard = screen.getByRole('main', { name: 'game-board' })
+    const gameBoard = screen.getByRole('main')
 
     expect(gameBoard).toBeInTheDocument()
   })
@@ -25,7 +26,7 @@ describe('Home', () => {
   test('renders Footer', () => {
     render(<Home />)
 
-    const footerTitle = screen.getByLabelText('app footer')
+    const footerTitle = screen.getByRole('contentinfo')
     expect(footerTitle).toBeInTheDocument()
   })
 })

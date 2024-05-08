@@ -2,11 +2,7 @@ import './App.scss'
 import Home from './pages/home'
 
 const App: React.FC = () => {
-  return (
-    <>
-      <Home />
-    </>
-  )
+  return <Home />
 }
 
 export default App
