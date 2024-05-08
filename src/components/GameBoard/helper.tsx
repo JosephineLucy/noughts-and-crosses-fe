@@ -16,7 +16,7 @@ export function createSpaces(numOfSpaces: number) {
         <button
           className="game-board__space"
           key={i}
-          aria-label="board-space"
+          aria-label="board space"
         ></button>
       ),
       icon: '',
