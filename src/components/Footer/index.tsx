@@ -1,9 +1,13 @@
 import './styles.scss'
 
-const Footer: React.FC = () => {
+type FooterProps = {
+  title: string
+}
+
+const Footer: React.FC<FooterProps> = ({ title }) => {
   return (
     <footer className="app-footer">
-      <p className="app-footer__title">Noughts and Crosses ©</p>
+      <p className="app-footer__title">{title}</p>
     </footer>
   )
 }

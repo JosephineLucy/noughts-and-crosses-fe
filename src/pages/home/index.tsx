@@ -8,7 +8,7 @@ const Home: React.FC = () => {
     <section className="home">
       <Header title="Noughts and Crosses" />
       <GameBoard />
-      <Footer />
+      <Footer title="Noughts and Crosses ©" />
     </section>
   )
 }
