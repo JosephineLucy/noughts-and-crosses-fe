@@ -45,11 +45,15 @@
   "lint-staged": {
     "**/*.{ts,tsx}": [
       "npm run lint",
-      "prettier --write"
+      "prettier --write",
+      "npm run type-check",
+      "npm run test"
     ],
     "**/*.{js,jsx}": [
       "npm run lint",
-      "prettier --write"
+      "prettier --write",
+      "npm run type-check",
+      "npm run test"
     ]
   }
 }
