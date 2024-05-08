@@ -26,7 +26,7 @@ describe('Home', () => {
   test('renders Footer', () => {
     render(<Home />)
 
-    const footerTitle = screen.getByLabelText('app footer')
+    const footerTitle = screen.getByRole('contentinfo')
     expect(footerTitle).toBeInTheDocument()
   })
 })
