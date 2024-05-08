@@ -6,8 +6,8 @@ const GameBoard: React.FC = () => {
   const boardSpaces: BoardSpace[] = createSpaces(NUM_OF_SPACES)
 
   return (
-    <main className="game-board" aria-label="game board">
-      <div className="game-board__spaces">
+    <main className="game-board">
+      <div className="game-board__spaces" aria-label="game board">
         {boardSpaces.map((space) => {
           return space.element
         })}
