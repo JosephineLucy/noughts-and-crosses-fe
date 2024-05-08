@@ -8,7 +8,7 @@ describe('GameBoard', () => {
     render(<GameBoard />)
 
     const boardSpaces: HTMLButtonElement[] = screen.getAllByRole('button', {
-      name: /board space \d/,
+      name: /board space \d+/,
     })
 
     expect(boardSpaces.length).toBe(NUM_OF_BOARD_SPACES)
