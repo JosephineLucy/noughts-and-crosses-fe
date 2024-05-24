@@ -6,7 +6,7 @@ describe('Footer', () => {
   test('renders expected footer title', () => {
     render(<Footer />)
 
-    const footerTitle = screen.getByText('Naughty Pups and Cross Kitties ©')
+    const footerTitle = screen.getByText('Noughty Pups and Crxss Kitties ©')
 
     expect(footerTitle).toBeInTheDocument()
   })
