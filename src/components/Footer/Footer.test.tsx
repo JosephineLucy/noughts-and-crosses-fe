@@ -3,11 +3,13 @@ import { render, screen } from '@testing-library/react'
 import Footer from '.'
 
 describe('Footer', () => {
-  test('renders expected footer title', () => {
-    render(<Footer />)
+  test('renders title prop as passed in', () => {
+    const title = 'test title'
+    render(<Footer title={title} />)
 
-    const footerTitle = screen.getByText('Noughty Pups and Crxss Kitties ©')
+    const footer = screen.getByRole('contentinfo')
 
-    expect(footerTitle).toBeInTheDocument()
+    expect(footer).toBeInTheDocument()
+    expect(footer).toHaveTextContent(title)
   })
 })
