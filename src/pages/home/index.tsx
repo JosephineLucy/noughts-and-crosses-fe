@@ -5,11 +5,12 @@ import Header from '../../components/Header'
 import { AppLabels, NUM_OF_BOARD_SPACES } from '../../constants/constants'
 
 const Home: React.FC = () => {
+  const currentYear: string = String(new Date().getFullYear())
   return (
     <section className="home">
       <Header title={AppLabels.title} />
       <GameBoard numOfBoardSpaces={NUM_OF_BOARD_SPACES} />
-      <Footer title={`© ${AppLabels.title}`} />
+      <Footer title={`© ${AppLabels.title} ${currentYear}`} />
     </section>
   )
 }
