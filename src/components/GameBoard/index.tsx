@@ -9,13 +9,13 @@ type GameBoardProps = {
 const GameBoard: React.FC<GameBoardProps> = ({ numOfBoardSpaces }) => {
   const boardSpaceIds = createSpaceIds(numOfBoardSpaces)
   return (
-    <main className="game-board" aria-label="game board">
-      <div className="game-board__spaces">
+    <div className="game" aria-label="game">
+      <div className="game__board" aria-label="game board">
         {boardSpaceIds.map((spaceId) => {
           return <BoardSpace id={spaceId} />
         })}
       </div>
-    </main>
+    </div>
   )
 }
 

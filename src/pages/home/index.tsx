@@ -9,7 +9,9 @@ const Home: React.FC = () => {
   return (
     <section className="home">
       <Header title={AppLabels.title} />
-      <GameBoard numOfBoardSpaces={NUM_OF_BOARD_SPACES} />
+      <main>
+        <GameBoard numOfBoardSpaces={NUM_OF_BOARD_SPACES} />
+      </main>
       <Footer title={`© ${AppLabels.title} ${currentYear}`} />
     </section>
   )
