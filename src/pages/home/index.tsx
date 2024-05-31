@@ -1,6 +1,6 @@
 import './styles.scss'
 import Footer from '../../components/Footer'
-import GameBoard from '../../components/GameBoard'
+import Game from '../../components/Game'
 import Header from '../../components/Header'
 import { AppLabels, NUM_OF_BOARD_SPACES } from '../../constants/constants'
 
@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     <section className="home">
       <Header title={AppLabels.title} />
       <main>
-        <GameBoard numOfBoardSpaces={NUM_OF_BOARD_SPACES} />
+        <Game numOfBoardSpaces={NUM_OF_BOARD_SPACES} />
       </main>
       <Footer title={`© ${AppLabels.title} ${currentYear}`} />
     </section>

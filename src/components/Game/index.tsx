@@ -2,11 +2,11 @@ import BoardSpace from '../BoardSpace'
 import { createSpaceIds } from './helper'
 import './styles.scss'
 
-type GameBoardProps = {
+type GameProps = {
   numOfBoardSpaces: number
 }
 
-const GameBoard: React.FC<GameBoardProps> = ({ numOfBoardSpaces }) => {
+const Game: React.FC<GameProps> = ({ numOfBoardSpaces }) => {
   const boardSpaceIds = createSpaceIds(numOfBoardSpaces)
   return (
     <div className="game" aria-label="game">
@@ -19,4 +19,4 @@ const GameBoard: React.FC<GameBoardProps> = ({ numOfBoardSpaces }) => {
   )
 }
 
-export default GameBoard
+export default Game
