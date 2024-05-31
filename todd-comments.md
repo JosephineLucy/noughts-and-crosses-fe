@@ -1,23 +1,23 @@
 # Todd Comments
 
-1. In the lint-staged of your package.json, you could add npm test and npm type-check to make sure you can only commit when tests are running and the types are fine.
-2. Give it a title in your index.html
-3. You have sass as a dependency; I think it should be a dev dependency. You may want to check this though. Be sure to npm uninstall it before reinstalling.
-4. In your package.json dev dependencies, you have an "i" dependency - don't think you want that. Be sure to uninstall it rather than just delete it.
-5. You also have "npm" as a dev dependency - pretty sure you don't want that either. Uninstall, don't just delete.
-6. [optional] in App, you don't need Home to be in a fragment tag (unless you add new pages at some point, in which case you'd probably be doing something with a router? I can't remember. Anyway, I'd deal with that nonsense if/when it comes up.)
-7. In your header and footer, I would create them as components with props for the title. That way you can reuse them in other applications.
-8. Another thing I'd do is create a GameLabels enum with the property gameTitle and put my title string in there. I'd pass that to my header and footer so wherever we then have the title, we only need to change it in one place.
-9. There is a semantic tag for footers (footer), so you don't need to be creating it as a div.
-10. In footer, I believe it is conventional to put the copyright sign before the title rather than after. Also, we should probably have the year in there too.
-11. BOARD_SIZE might be a better name than NUM_OF_SPACES? My reasoning is that it feels a little clearer to me what we are talking about. If you just saw the const NUMBER_OF_SPACES out in the wild with no context, it could be anything. BOARD_SIZE better says what it is. Happy for you to disagree with that though.
-12. I don't think your html tags header, footer and main need aria labels. They are naturally given labels as part of their tag so screen readers read them correctly anyway. It's best to use aria labels for elements that display no visible text or require a bit of instruction on how to use them.
-13. if you do use aria labels in your header, footer etc, don't separate the words with dashes. They should be straight forward english sentences: "game board", not "game-board". Screen readers read aria labels.
-14. You have a type in your GameBoard helper.tsx file. Should probably be in types.ts.
-15. Your button aria label has a hyphen in it too.
-16. if you want to get main in your tests, you don't need to use the name property. You could just getByRole("main") as there should only ever be 1 main element in your project. The same is true of the header and footer tags (though the role of the footer tag is something daft like 'content-info'.)
-17. In your footer test, you are not using getByRole. If you change your footer so it uses the footer tag instead of div (as suggested above) you can use getByRole('content-info') to get it (you might have to check I have 'content-info' right)
-18. Suggestion - you could give some thought to passing your board size/number of spaces to the GameBoard component as a prop. It would make it more reusable and gives you the potential to create grids of any size.
-19. Something to think about - when I use my screen reader to move through your spaces, they are all called "board space" so I have no idea which space I am on.
+Just a few comments - hardly anything. I really like what you've got at the moment. It's very neat and tidy. I've put the second deliverable at the bottom of this file - see if we can make it less neat and tidy ;)
 
-I think that is all from me at this point. It's looking nice and tidy in general even though I've made lots of comments.
+## Comments
+
+1. If you want short paths to work, I think there is something you can put in your vite.config file. There is something about it in my README on branches NAC 3 and 4 I think. You can also look in my vite.config on those branches.
+2. In your Home file, your root HTML element is still a section. I think it should be `<main>`.
+3. I'm not sure if your footer prop should be called 'title'. Maybe 'footerText' or 'footer' would be better? (This would also mean changing its className). Don't worry if you disagree, it's FIIIINE.
+4. Your footer is still pushed over to the right-most side of the screen. You might prefer this but I think most sites have it on the left. Leave it as is if you want it like that.
+5. In your GameBoard, you have wrapped that in `<main>`. As far as I understand it, each page (e.g. your home page) should have at most one `<header>`, one `<footer>` and one `<main>'. The main should contain all the page content, that is, `<main>`should not be wrapped by anything. In your case, it is wrapped in a`<section>` tag in the home page. In short, swap that main and section tag around.
+6. Fixing 5) will mean you'll have to fix your GameBoard test in the Home tests.
+7. The way you're doing that GameBoard now is waaaay neater and nicer. Delightful.
+8. Is there a reason you've put display flex on your header? I'm not sure you're using any flex properties on it, but I could be wrong. I have no idea what I'm doing with flex.
+
+## Deliverable 2: Place First Piece
+
+As a user, I can place my first piece on the game board so I can see player 1's move. I should be able to:
+
+1. See that it is Player 1's turn and some indication of the token (nought or cross) that I'm using.
+2. Place a piece on any of the board squares.
+
+At this point, we do not need to change the players turn and it's fine if you can fill up the board with the player's piece.
