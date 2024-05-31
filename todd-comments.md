@@ -1,6 +1,6 @@
 # Todd Comments
 
-Just a few comments - hardly anything. I really like what you've got at the moment. It's very neat and tidy. I've put the second deliverable at the bottom of this file - see if we can make it less neat and tidy ;)
+Just a few comments - hardly anything. I really like what you've got at the moment. It's very neat and tidy. I've put the second deliverable at the bottom of this file - see if we can make it less neat and tidy ;
 
 ## Comments
 
