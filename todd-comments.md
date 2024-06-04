@@ -1,6 +1,6 @@
 # Todd Comments
 
-Just a few comments - hardly anything. I really like what you've got at the moment. It's very neat and tidy. I've put the second deliverable at the bottom of this file - see if we can make it less neat and tidy ;
+So, I've written you these comments, but I think you've fixed some of these on your other branch. I don't have access to your other branch, so I can't make comments on that. Maybe you should merge that other branch into main and I'll comment on that next. I'll put deliverable 2 up at the bottom of the comments too just so you have something else to work on.
 
 ## Comments
 
@@ -8,10 +8,11 @@ Just a few comments - hardly anything. I really like what you've got at the mome
 2. In your Home file, your root HTML element is still a section. I think it should be `<main>`.
 3. I'm not sure if your footer prop should be called 'title'. Maybe 'footerText' or 'footer' would be better? (This would also mean changing its className). Don't worry if you disagree, it's FIIIINE.
 4. Your footer is still pushed over to the right-most side of the screen. You might prefer this but I think most sites have it on the left. Leave it as is if you want it like that.
-5. In your GameBoard, you have wrapped that in `<main>`. As far as I understand it, each page (e.g. your home page) should have at most one `<header>`, one `<footer>` and one `<main>'. The main should contain all the page content, that is, `<main>`should not be wrapped by anything. In your case, it is wrapped in a`<section>` tag in the home page. In short, swap that main and section tag around.
-6. Fixing 5 will mean you'll have to fix your GameBoard test in the Home tests.
-7. The way you're doing that GameBoard now is waaaay neater and nicer. Delightful.
-8. Is there a reason you've put display flex on your header? I'm not sure you're using any flex properties on it, but I could be wrong. I have no idea what I'm doing with flex.
+5. Your helper file in GameBoard contains a BoardSpace type. Shouldn't this be in a types file?
+6. In your GameBoard, you have wrapped that in `<main>`. As far as I understand it, each page (e.g. your home page) should have at most one `<header>`, one `<footer>` and one `<main>'. The main should contain all the page content, that is, `<main>`should not be wrapped by anything. In your case, it is wrapped in a`<section>` tag in the home page.
+7. Consider passing your NUM_OF_BOARD_SPACES into your GameBoard as a prop so you can create larger and smaller game boards.
+8. Still no date in footer.
+9. Something to think about - when I use my screen reader to move through your spaces, they are all called "board space" so I have no idea which space I am on.
 
 ## Deliverable 2: Place First Piece
 
