@@ -1,18 +1,19 @@
 # Todd Comments
 
-So, I've written you these comments, but I think you've fixed some of these on your other branch. I don't have access to your other branch, so I can't make comments on that. Maybe you should merge that other branch into main and I'll comment on that next. I'll put deliverable 2 up at the bottom of the comments too just so you have something else to work on.
-
 ## Comments
 
 1. If you want short paths to work, I think there is something you can put in your vite.config file. There is something about it in my README on branches NAC 3 and 4 I think. You can also look in my vite.config on those branches.
-2. In your Home file, your root HTML element is still a section. I think it should be `<main>`.
-3. I'm not sure if your footer prop should be called 'title'. Maybe 'footerText' or 'footer' would be better? (This would also mean changing its className). Don't worry if you disagree, it's FIIIINE.
-4. Your footer is still pushed over to the right-most side of the screen. You might prefer this but I think most sites have it on the left. Leave it as is if you want it like that.
-5. Your helper file in GameBoard contains a BoardSpace type. Shouldn't this be in a types file?
-6. In your GameBoard, you have wrapped that in `<main>`. As far as I understand it, each page (e.g. your home page) should have at most one `<header>`, one `<footer>` and one `<main>'. The main should contain all the page content, that is, `<main>`should not be wrapped by anything. In your case, it is wrapped in a`<section>` tag in the home page.
-7. Consider passing your NUM_OF_BOARD_SPACES into your GameBoard as a prop so you can create larger and smaller game boards.
-8. Still no date in footer.
-9. Something to think about - when I use my screen reader to move through your spaces, they are all called "board space" so I have no idea which space I am on.
+2. In Home, an alternative to typing your fullYear result would be to just return the number and let the string interpolation in the footer title handle the typing automatically. Interpolation will automatically type any variable that ends up between the back ticks.
+3. You've renamed your AppHeader component to Header, but you've not changed the class names inside it. You may or may not care.
+4. Same problem as 3) with your Footer component.
+5. When I run your app, the footer seems to be on the right hand side. I don't think anyone else does it like that.
+6. Your title is 'Noughty Pups and Crxss Kitties'. I'm not sure if 'Crxss ' is deliberate? I suspect not.
+7. Your Game description is still called GameBoard in your Game test file.
+8. You've done your grid template better than mine.
+9. In your Home tests where you test for the header, you are testing for the title as a literal string (not using the constant). Is this deliberate? It's not bad to do this, I was just wondering. You've also got 'Crxss' here again instead of 'Cross' which makes me think it's deliberate? Also, instead of checking for the actual heading, you could just check for the header getByRole('banner') (I think).
+10. I'm going to pretend I didn't see you are using a getByLabelText. I'm not sure what the best solution to that would be either. Maybe getByRole('main')?
+
+Think that's me done. Not much of any import really.
 
 ## Deliverable 2: Place First Piece
 
