@@ -4,7 +4,7 @@ import Header from '../../components/Header'
 import { AppLabels, NUM_OF_BOARD_SPACES } from '../../constants/constants'
 
 const Home: React.FC = () => {
-  const currentYear: string = String(new Date().getFullYear())
+  const currentYear: number = new Date().getFullYear()
   return (
     <>
       <Header title={AppLabels.title} />
