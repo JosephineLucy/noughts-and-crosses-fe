@@ -6,8 +6,8 @@ type FooterProps = {
 
 const Footer: React.FC<FooterProps> = ({ title }) => {
   return (
-    <footer className="app-footer">
-      <p className="app-footer__title">{title}</p>
+    <footer className="footer">
+      <p className="footer__title">{title}</p>
     </footer>
   )
 }
